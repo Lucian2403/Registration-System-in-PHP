@@ -3,9 +3,9 @@
 
 The data from /phpmyadmin:
 
-Database name: login_system_tutorial
+Database name: *login_system_tutorial*
 
-Username:root
+Username: *root*
 
 Pass: 
 
