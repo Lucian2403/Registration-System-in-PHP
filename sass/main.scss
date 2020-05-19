@@ -1,0 +1,177 @@
+//Variables
+$backgroundColor: rgba(182, 206, 181, 0.72);
+$primaryColor: rgb(0, 0, 0);
+$secondaryColor: #640360;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Roboto, sans-serif;
+
+  li {
+    list-style: none;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: $primaryColor;
+  }
+}
+
+.container {
+  max-width: 180rem;
+  width: 150rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: $backgroundColor;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img-link {
+    &--img-logo {
+      height: 8rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 5rem;
+
+    li {
+      font-size: 1.6rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      a,a:visited {
+        font-weight: 500;
+        padding: 1rem;
+        border: 2px solid transparent;
+        text-transform: uppercase;
+
+        transition: .3s ease-in-out;
+
+        &:hover {
+          border: 2px solid $secondaryColor;
+          border-radius: 15px 0 15px 0;
+        }
+      }
+    }
+  }
+
+  &__loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__formLogin {
+      input {
+        height: 3rem;
+        margin-right: 2rem;
+        padding: 0 .5rem;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+
+    &__btnSignUp {
+      margin: 0 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.button {
+  background-color: rgba($primaryColor, .7);
+  color: white;
+  font-size: 1.5rem;
+  padding: .7rem;
+  border: 1px solid $secondaryColor;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  transition: .2s;
+
+  &:hover {
+    box-shadow: .1rem .4rem .7rem rgba($primaryColor, .5);
+  }
+  &:active {
+    box-shadow: .1rem .2rem .9rem rgba($primaryColor, .7);
+    transform: scale(.95);
+  }
+}
+
+
+.main-section {
+  background-color: $backgroundColor;
+  margin: 5rem auto;
+  width: 40rem;
+  height: auto;
+  border-radius: 2rem;
+
+  h1 {
+    text-align: center;
+    position: relative;
+    top: 2rem;
+  }
+
+  .userStatus {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+  }
+}
+
+
+// SIGN UP SECTION
+input {
+  height: 3rem;
+  padding: 0 .5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-sign_up {
+  padding: 4rem;
+  text-align: center;
+
+  input {
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    display: block;
+    margin: .5rem auto 0 auto;
+  }
+}
+
+//ERROR MESSAGES////
+.signupError {
+  position: relative;
+  top: 2.5rem;
+  text-align: center;
+  padding: 0;
+  font-size: 1.4rem;
+  color: red;
+}
